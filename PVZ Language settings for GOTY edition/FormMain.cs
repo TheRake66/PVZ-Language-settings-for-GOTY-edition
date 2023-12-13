@@ -20,9 +20,9 @@ namespace PVZ_Language_settings
         private void FormMain_Load(object sender, EventArgs e)
         {
             // Charge la police d'ecriture.
-            byte[] data = Resources.font;
             using (PrivateFontCollection collection = new PrivateFontCollection())
             {
+                byte[] data = Resources.font;
                 IntPtr buffer = Marshal.UnsafeAddrOfPinnedArrayElement(data, 0);
                 collection.AddMemoryFont(buffer, data.Length);
                 Font current = this.Font;
@@ -151,26 +151,39 @@ namespace PVZ_Language_settings
                     string path = dialog.SelectedPath;
                     if (!string.IsNullOrWhiteSpace(path))
                     {
-                        try
+                        string exe = Path.Combine(path, "PlantsVsZombies.exe");
+                        if (File.Exists(exe))
                         {
-                            // Decompresse le fichier ZIP en ressource dans le dossier du jeu.
-                            string zip = Path.Combine(path, "tmp.zip");
-                            File.WriteAllBytes(zip, ressource);
-                            ZipFile.ExtractToDirectory(zip, path, true);
-                            File.Delete(zip);
+                            try
+                            {
+                                // Decompresse le fichier ZIP en ressource dans le dossier du jeu.
+                                string zip = Path.Combine(path, "tmp.zip");
+                                File.WriteAllBytes(zip, ressource);
+                                ZipFile.ExtractToDirectory(zip, path, true);
+                                File.Delete(zip);
 
-                            // Message de fin.
-                            MessageBox.Show("The language has been changed.", this.Text,
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information);
+                                // Message de fin.
+                                MessageBox.Show("The language has been changed.", this.Text,
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Information);
+
+                                // Quitte l'application;
+                                Application.Exit();
+                            }
+                            catch (Exception error)
+                            {
+                                // Message d'erreur global.
+                                MessageBox.Show(error.Message, this.Text,
+                                    MessageBoxButtons.OK,
+                                    MessageBoxIcon.Error);
+                            }
                         }
-                        catch (Exception error)
+                        else
                         {
-                            // Message d'erreur.
-                            MessageBox.Show(error.Message, this.Text,
-                                MessageBoxButtons.RetryCancel,
-                                MessageBoxIcon.Error,
-                                MessageBoxDefaultButton.Button1);
+                            // Message d'avertissement si on ne trouve pas le jeu.
+                            MessageBox.Show("This is not the game installation folder !", this.Text,
+                                MessageBoxButtons.OK,
+                                MessageBoxIcon.Warning);
                         }
                     }
                 }
