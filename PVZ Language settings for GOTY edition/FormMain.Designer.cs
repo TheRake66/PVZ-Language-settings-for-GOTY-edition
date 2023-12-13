@@ -48,8 +48,8 @@
             this.pictureBoxLogo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.pictureBoxLogo.BackColor = System.Drawing.Color.Transparent;
             this.pictureBoxLogo.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxLogo.Image")));
-            this.pictureBoxLogo.Location = new System.Drawing.Point(351, 24);
-            this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(0, 0, 0, 42);
+            this.pictureBoxLogo.Location = new System.Drawing.Point(424, 24);
+            this.pictureBoxLogo.Margin = new System.Windows.Forms.Padding(0, 0, 0, 48);
             this.pictureBoxLogo.Name = "pictureBoxLogo";
             this.pictureBoxLogo.Size = new System.Drawing.Size(400, 240);
             this.pictureBoxLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -67,7 +67,7 @@
             this.buttonFr.ForeColor = System.Drawing.Color.White;
             this.buttonFr.Image = ((System.Drawing.Image)(resources.GetObject("buttonFr.Image")));
             this.buttonFr.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonFr.Location = new System.Drawing.Point(390, 378);
+            this.buttonFr.Location = new System.Drawing.Point(463, 384);
             this.buttonFr.Margin = new System.Windows.Forms.Padding(0, 0, 12, 0);
             this.buttonFr.Name = "buttonFr";
             this.buttonFr.Padding = new System.Windows.Forms.Padding(6);
@@ -89,7 +89,7 @@
             this.buttonEn.ForeColor = System.Drawing.Color.White;
             this.buttonEn.Image = ((System.Drawing.Image)(resources.GetObject("buttonEn.Image")));
             this.buttonEn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonEn.Location = new System.Drawing.Point(390, 306);
+            this.buttonEn.Location = new System.Drawing.Point(463, 312);
             this.buttonEn.Margin = new System.Windows.Forms.Padding(0, 0, 12, 12);
             this.buttonEn.Name = "buttonEn";
             this.buttonEn.Padding = new System.Windows.Forms.Padding(6);
@@ -111,7 +111,7 @@
             this.buttonDe.ForeColor = System.Drawing.Color.White;
             this.buttonDe.Image = ((System.Drawing.Image)(resources.GetObject("buttonDe.Image")));
             this.buttonDe.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonDe.Location = new System.Drawing.Point(557, 306);
+            this.buttonDe.Location = new System.Drawing.Point(630, 312);
             this.buttonDe.Margin = new System.Windows.Forms.Padding(0);
             this.buttonDe.Name = "buttonDe";
             this.buttonDe.Padding = new System.Windows.Forms.Padding(6);
@@ -133,7 +133,7 @@
             this.buttonIt.ForeColor = System.Drawing.Color.White;
             this.buttonIt.Image = ((System.Drawing.Image)(resources.GetObject("buttonIt.Image")));
             this.buttonIt.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonIt.Location = new System.Drawing.Point(474, 450);
+            this.buttonIt.Location = new System.Drawing.Point(547, 456);
             this.buttonIt.Margin = new System.Windows.Forms.Padding(0, 12, 0, 0);
             this.buttonIt.Name = "buttonIt";
             this.buttonIt.Padding = new System.Windows.Forms.Padding(6);
@@ -155,7 +155,7 @@
             this.buttonEs.ForeColor = System.Drawing.Color.White;
             this.buttonEs.Image = ((System.Drawing.Image)(resources.GetObject("buttonEs.Image")));
             this.buttonEs.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonEs.Location = new System.Drawing.Point(557, 378);
+            this.buttonEs.Location = new System.Drawing.Point(630, 384);
             this.buttonEs.Margin = new System.Windows.Forms.Padding(0);
             this.buttonEs.Name = "buttonEs";
             this.buttonEs.Padding = new System.Windows.Forms.Padding(6);
@@ -172,7 +172,7 @@
             this.labelVersion.AutoSize = true;
             this.labelVersion.BackColor = System.Drawing.Color.Transparent;
             this.labelVersion.ForeColor = System.Drawing.Color.White;
-            this.labelVersion.Location = new System.Drawing.Point(24, 645);
+            this.labelVersion.Location = new System.Drawing.Point(24, 730);
             this.labelVersion.Margin = new System.Windows.Forms.Padding(0);
             this.labelVersion.Name = "labelVersion";
             this.labelVersion.Size = new System.Drawing.Size(120, 24);
@@ -185,7 +185,7 @@
             this.linkLabelGithub.AutoSize = true;
             this.linkLabelGithub.BackColor = System.Drawing.Color.Transparent;
             this.linkLabelGithub.LinkColor = System.Drawing.Color.White;
-            this.linkLabelGithub.Location = new System.Drawing.Point(990, 645);
+            this.linkLabelGithub.Location = new System.Drawing.Point(1136, 730);
             this.linkLabelGithub.Margin = new System.Windows.Forms.Padding(0);
             this.linkLabelGithub.Name = "linkLabelGithub";
             this.linkLabelGithub.Size = new System.Drawing.Size(88, 24);
@@ -205,7 +205,7 @@
             this.linkLabelThanks.AutoSize = true;
             this.linkLabelThanks.BackColor = System.Drawing.Color.Transparent;
             this.linkLabelThanks.LinkColor = System.Drawing.Color.White;
-            this.linkLabelThanks.Location = new System.Drawing.Point(423, 645);
+            this.linkLabelThanks.Location = new System.Drawing.Point(496, 730);
             this.linkLabelThanks.Margin = new System.Windows.Forms.Padding(0);
             this.linkLabelThanks.Name = "linkLabelThanks";
             this.linkLabelThanks.Size = new System.Drawing.Size(257, 24);
@@ -219,8 +219,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 24F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
-            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClientSize = new System.Drawing.Size(1102, 693);
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1248, 778);
             this.Controls.Add(this.linkLabelThanks);
             this.Controls.Add(this.linkLabelGithub);
             this.Controls.Add(this.labelVersion);
@@ -233,7 +233,7 @@
             this.DoubleBuffered = true;
             this.Font = new System.Drawing.Font("Burbank Big Cd Bd", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.ForeColor = System.Drawing.Color.White;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 5, 3, 5);
             this.MaximizeBox = false;

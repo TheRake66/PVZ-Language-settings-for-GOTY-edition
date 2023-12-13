@@ -33,12 +33,14 @@ namespace PVZ_Language_settings
             Image? back = this.BackgroundImage;
             if (back != null)
             {
-                Size client = this.ClientSize;
+                double ratio = 3.25;
                 Size adapted = new Size(
-                    (this.Width - client.Width) + back.Width,
-                    (this.Height - client.Height) + back.Height);
-                this.Size = adapted;
+                    (int)(back.Width / ratio),
+                    (int)(back.Height / ratio));
+                this.ClientSize = adapted;
+                this.MinimumSize = adapted;
             }
+
 
             // Pre-place le logo hors ecran.
             PictureBox logo = this.pictureBoxLogo;
